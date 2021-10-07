@@ -1,0 +1,36 @@
+{
+    "name": "ristekusdi/mca-kubemq-laravel",
+    "description": "paket laravel untuk pengiriman pesan telegram menggunakan kubemq",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riset dan Teknologi USDI",
+            "email": "usdi@unud.ac.id",
+            "homepage": "https://usdi.unud.ac.id"
+        }
+    ],
+    "homepage": "https://usdi.unud.ac.id",
+    "keywords": [
+        "mca",
+        "kubemq",
+        "laravel"
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ristekusdi\\McaKubemqLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ristekusdi\\McaKubemqLaravel\\McaKubemqLaravelServiceProvider"
+            ],
+            "aliases": {
+                "Messagemcakube": "\\Ristekusdi\\McaKubemqLaravel\\Facades\\Messagemcakube"
+            }
+        }
+    },
+    "require": {}
+}
