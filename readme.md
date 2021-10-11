@@ -106,3 +106,43 @@ Route::get('/send-message', function () {
     Messagemcakube::sendMessage(32018000182, $message);
     return view('welcome');
 });
+```
+
+## setup laravel versi 5.4 kebawah
+untuk penggunaan di laravel versi 5.4 kebawah perlu perlu di lakukan secara manual
+- composer require ristekusdi/mca-kubemq-laravel
+- buka file config/app.php
+- tambahkan McaKubemqLaravelServiceProvider di bagian providers
+```php
+    /*
+    * Package Service Providers...
+    */
+    Ristekusdi\McaKubemqLaravel\McaKubemqLaravelServiceProvider::class,
+    /*
+```
+- tambahkan juga alias di bagian list aliases
+```
+'Messagemcakube' => \Ristekusdi\McaKubemqLaravel\Facades\Messagemcakube::class,
+```
+- di dalam forlder ```config``` tambahkan file ```mcakubemqphp.php```
+- isikan dengan config seperti ini
+```
+<?php
+return array(
+    'address' => env('MCAKUBEMQ_ADDRESS', '172.0.0.1'),
+    'port' => env('MCAKUBEMQ_PORT', '172.0.0.1'),
+    'clientid' => env('MCAKUBEMQ_CLIENTID', 'default'),
+    'channel' => env('MCAKUBEMQ_CHANNEL', 'default'),
+);
+```
+- tambahkan .env file seperti cara sebelumnya
+
+- jalankan perintah di terminal
+```
+php artisan cache:clear
+php artisan config:clear
+composer dump-autoload
+```
+- kirimkan pesan sesuai contoh sebelumnya
+- selesai
+
