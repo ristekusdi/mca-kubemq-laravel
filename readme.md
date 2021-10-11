@@ -23,6 +23,7 @@ php artisan vendor:publish --tag=config-mca-kubemq
 ```
 
 ## Setting environment file untuk package ini
+untuk pengaturan di bagian ini, sesuaikan dengan setting KUBEMQ yang sudah di sediakan oleh admin.
 ```
 MCAKUBEMQ_ADDRESS=
 MCAKUBEMQ_PORT=
@@ -53,7 +54,7 @@ Route::get('/send-message', function () {
 ```
 
 ## debug
-untuk men-debug pesan yang di kirim pertu di tambahkan parameter ke-3 berupa boolean(true), default debug adalah false. berikut contohnya 
+untuk men-debug pesan yang di kirim pertu di tambahkan parameter ke-3 berupa boolean(true), default debug adalah false. berikut contohnya. 
 ```php
 
 <?php
