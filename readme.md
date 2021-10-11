@@ -23,13 +23,16 @@ php artisan vendor:publish --tag=config-mca-kubemq
 ```
 
 ## Setting environment file untuk package ini
-untuk pengaturan di bagian ini, sesuaikan dengan setting KUBEMQ yang sudah di sediakan oleh admin.
+untuk pengaturan di bagian ini, sesuaikan dengan setting KUBEMQ yang sudah di sediakan oleh admin. buka file ```.env``` dan tambahkan di bawah ini
 ```
 MCAKUBEMQ_ADDRESS=
 MCAKUBEMQ_PORT=
 MCAKUBEMQ_CLIENTID=
 MCAKUBEMQ_CHANNEL=
 ```
+
+## tested
+package ``` ristekusdi/mca-kubemq-laravel ``` sudah ditest pada laravel versi 5.5, 5.8, dan 8.0.
 
 # Penggunaan Dasar
 
